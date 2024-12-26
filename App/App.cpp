@@ -215,7 +215,7 @@ int ocall_get_filesize(const char *modelname, long *f_size){
 	fseek(fp, 0, SEEK_SET);
 
 	*f_size = fsize;
-	close(fp);
+	fclose(fp);
     return 0;
 }
 
